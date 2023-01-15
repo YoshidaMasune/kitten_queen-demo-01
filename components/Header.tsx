@@ -1,6 +1,6 @@
 import React from 'react';
-import SlideItem from './SlideItem';
-import Slideshow from './Slideshow';
+import SlideItem from './slider/SlideItem';
+import Slideshow from './slider/Slideshow';
 
 function Header() {
   const test =
@@ -13,7 +13,7 @@ function Header() {
       content: test,
     },
     {
-      img: '/header/cat-01.png',
+      img: '/header/cat-02.png',
       head: 'ยอมไม่ได้',
       content: test,
     },
@@ -24,9 +24,9 @@ function Header() {
     },
   ];
   return (
-    <div className="h-[50vh]">
+    <>
       <Slideshow heads={heads} />
-    </div>
+    </>
   );
 }
 

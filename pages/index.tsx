@@ -20,22 +20,22 @@ export default function Home() {
         <Layout>
           <Header />
           <div className="bg-gray-100">
-            <section className="lg:container mx-auto py-24 px-24">
+            <section className="lg:container mx-auto px-2 lg:py-24 lg:px-24 pt-20">
               <article className="w-fit mx-auto text-center">
                 <h2 className="text-yellow-700 text-xl">do you know</h2>
                 <h1 className="text-sky-600 text-4xl mt-5">รู้หรือไม่</h1>
               </article>
 
               {/* knowlage container */}
-              <div className="flex flex-col gap-64 mt-20">
+              <div className="flex flex-col gap-20 lg:gap-64 mt-10">
                 {/* knowlage item */}
-                <div className="flex flex-col md:flex-row gap-3">
+                <div className="flex flex-col-reverse flex-col md:flex-row-reverse gap-10">
                   <div className="flex-1">
                     <article>
-                      <h2 className="text-2xl text-sky-900">
+                      <h2 className="text-lg lg:text-2xl  px-3 text-sky-900">
                         การแตะจมูกเป็นการทักทายอย่างหนึ่ง
                       </h2>
-                      <p className="mt-5 leading-[4rem] ml-3">
+                      <p className="mt-5 lg:leading-[4rem] leading-[2rem] indent-6 text-sm ml-3">
                         เวลาที่เห็นแมวเอาจมูกมาแตะกันไม่ใช่เรื่องผิดปกติอะไร
                         เพราะอาการดังกล่าวเป็นแค่การทักทายแบบแมวทั่วไป
                         แต่อย่างไรพวกมันจะทักทายด้วยวิธีดังกล่าวกับแมวที่คุ้นเคยเท่านั้น
@@ -45,19 +45,22 @@ export default function Home() {
                     </article>
                   </div>
                   <div className="flex-1">
-                    <img src="/logo/logo_cat.png" className="w-64" alt="" />
+                    <img
+                      src="/logo/logo_cat.png"
+                      className="w-32 mx-auto lg:w-64"
+                      alt=""
+                    />
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row gap-3">
-                  <div className="flex-1">
-                    <img src="/logo/logo_cat.png" className="w-64" alt="" />
-                  </div>
+
+                {/* knowlage item */}
+                <div className="flex flex-col-reverse md:flex-row gap-10">
                   <div className="flex-1">
                     <article>
-                      <h2 className="text-2xl text-sky-900">
+                      <h2 className="text-lg lg:text-2xl  px-3 text-sky-900">
                         การแตะจมูกเป็นการทักทายอย่างหนึ่ง
                       </h2>
-                      <p className="mt-5 leading-[4rem] ml-3">
+                      <p className="mt-5 lg:leading-[4rem] leading-[2rem] indent-6 text-sm ml-3">
                         เวลาที่เห็นแมวเอาจมูกมาแตะกันไม่ใช่เรื่องผิดปกติอะไร
                         เพราะอาการดังกล่าวเป็นแค่การทักทายแบบแมวทั่วไป
                         แต่อย่างไรพวกมันจะทักทายด้วยวิธีดังกล่าวกับแมวที่คุ้นเคยเท่านั้น
@@ -65,6 +68,13 @@ export default function Home() {
                         อีกฝ่ายเป็นอย่างไรบ้างนั่นเอง
                       </p>
                     </article>
+                  </div>
+                  <div className="flex-1">
+                    <img
+                      src="/logo/logo_cat.png"
+                      className="w-32 mx-auto lg:w-64"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>

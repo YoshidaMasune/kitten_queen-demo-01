@@ -16,7 +16,7 @@ const NavLink = ({ to, content }: navLink) => {
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="bg-white sticky top-0 z-30 w-full">
       <div className="">
         {/* top bar */}
         <section className="md:container px-4 mx-auto flex justify-between items-center">

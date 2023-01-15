@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.opacity-animate {
+   animation: opacity-animate 1.5s;
+}
+
+@keyframes opacity-animate {
+   from {
+      opacity: .4
+   }
+
+   to {
+      opacity: 1
+   }
+}

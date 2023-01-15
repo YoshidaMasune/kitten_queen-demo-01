@@ -14,9 +14,9 @@ function Layout({ children }: Props) {
         <link rel="icon" href="/logo/logo_cat.png" />
         <title>KQ</title>
       </Head>
-      <div>
+      <div className="">
         <Navbar />
-        <section>{children}</section>
+        <section className="-z-30 ">{children}</section>
         <Footer />
       </div>
     </>
