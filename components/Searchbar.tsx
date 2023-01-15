@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
-const SearchBar = () => {
+interface Props {}
+
+const SearchBar: React.FC<Props> = () => {
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const searchUrl = `https://www.google.com/search?q=${query}`;
     window.open(searchUrl, '_blank');
@@ -17,7 +19,9 @@ const SearchBar = () => {
           className="focus:outline-none border p-2 rounded-lg"
           placeholder="Search"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            setQuery(event.target.value)
+          }
           required
         />
         <button type="submit" className="your-button-class-name">
