@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import SearchBar from './Searchbar';
 
 interface navLink {
   to: string;
@@ -30,16 +31,7 @@ function Navbar() {
             </div>
           </div>
           <div className="">
-            <form className="flex items-center">
-              <input
-                type="text"
-                className="focus:outline-none border p-2 rounded-lg"
-                placeholder="search"
-              />
-              <span>
-                <button>search</button>
-              </span>
-            </form>
+            <SearchBar />
           </div>
         </section>
 
