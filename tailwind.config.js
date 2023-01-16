@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,8 +8,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        'opacity-animate': '',
+      fontFamily: {
+        mali: [],
       },
     },
   },

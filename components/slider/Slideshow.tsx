@@ -60,8 +60,6 @@ function Slideshow({ heads }: Props) {
    *  slide btn end -------------------------------------------
    */
 
-  console.log(currentIndex);
-
   return (
     <div className="relative overflow-hidden h-[30vh] lg:h-[50vh]">
       {/* slide bar */}

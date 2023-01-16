@@ -12,6 +12,7 @@ function Layout({ children }: Props) {
     <>
       <Head>
         <link rel="icon" href="/logo/logo_cat.png" />
+        <link rel="icon" href="/logo/logo_cat.png" />
         <title>KQ</title>
       </Head>
       <div className="">

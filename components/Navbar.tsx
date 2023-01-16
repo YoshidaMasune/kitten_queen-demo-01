@@ -17,13 +17,13 @@ const NavLink = ({ to, content }: navLink) => {
 
 function Navbar() {
   return (
-    <nav className="bg-white sticky top-0 z-30 w-full">
+    <nav className="bg-white sticky top-0 z-30 w-full shadow-md">
       <div className="">
         {/* top bar */}
         <section className="md:container px-4 mx-auto flex justify-between items-center">
           <div className="flex container mx-auto">
             <div className="flex">
-              <img src="/logo/logo_cat.png" className="w-24" alt="" />
+              <img src="/logo/logo_cat.png" className="w-[4rem]" alt="" />
               <article className="self-center gap-2 hidden md:flex">
                 <h1 className="text-4xl text-sky-500">kitten</h1>
                 <h1 className="text-4xl text-yellow-500">queens</h1>
@@ -36,7 +36,7 @@ function Navbar() {
         </section>
 
         {/* navigation bar */}
-        <section className="w-full bg-gray-100 py-4 ">
+        <section className="w-full bg-slate-200 py-4 ">
           <ul className="flex gap-3 w-fit mx-auto">
             <NavLink to="/" content="หน้าเเรก" />
             <NavLink to="/cats" content="10 สายพันธุ์เเมว" />
