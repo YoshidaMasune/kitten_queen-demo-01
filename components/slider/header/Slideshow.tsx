@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import SlideItem from './SlideItem';
+import SlideItem from '../SlideItem';
 
 interface Props {
   heads: Array<{ img: string; head: string; content: string }>;

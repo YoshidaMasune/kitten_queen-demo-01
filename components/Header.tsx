@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideItem from './slider/header/SlideItem';
+import SlideItem from './slider/SlideItem';
 import Slideshow from './slider/header/Slideshow';
 
 function Header() {

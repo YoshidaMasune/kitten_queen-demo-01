@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import CatSlider from '@/components/slider/catSlideer/CatSlider';
+import HeadTitle from '@/components/HeadTitle';
+import VidioSlide from '@/components/slider/vidios/VidioSlide';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,10 +25,9 @@ export default function Home() {
         {/* do you knows */}
         <div className="bg-gray-100">
           <section className="lg:container mx-auto px-2 lg:py-24 lg:px-24 pt-20">
-            <article className="w-fit mx-auto text-center">
-              <h2 className="text-yellow-700 text-xl">do you know</h2>
-              <h1 className="text-sky-600 text-4xl mt-5">รู้หรือไม่</h1>
-            </article>
+            <div>
+              <HeadTitle eng="Do you know" th="รู้หรือไม่" />
+            </div>
 
             {/* knowlage container */}
             <div className="flex flex-col gap-20 lg:gap-64 mt-10">
@@ -88,14 +89,8 @@ export default function Home() {
           <CatSlider />
         </div>
 
-        <div className="w-[60rem]">
-          <iframe
-            width="450"
-            height={300}
-            src="https://www.youtube.com/embed/r-4JqG11wUk"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
+        <div className="mt-20">
+          <VidioSlide />
         </div>
       </Layout>
     </>

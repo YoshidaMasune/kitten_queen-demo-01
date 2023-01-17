@@ -17,7 +17,7 @@ function Layout({ children }: Props) {
       </Head>
       <div className="">
         <Navbar />
-        <section className="-z-30 ">{children}</section>
+        <section className="">{children}</section>
         <Footer />
       </div>
     </>

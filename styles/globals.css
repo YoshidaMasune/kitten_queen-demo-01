@@ -17,4 +17,8 @@
          opacity: 1
       }
    }
+
+   .item-hero {
+      min-width: calc(calc(100vw - 400px) / 5);
+   }
 }
