@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import CatSlider from '@/components/slider/catSlideer/CatSlider';
 import HeadTitle from '@/components/HeadTitle';
 import VidioSlide from '@/components/slider/vidios/VidioSlide';
+import { cats } from '@/data/cat_list';
 
 const inter = Inter({ subsets: ['latin'] });
 

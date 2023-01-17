@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
-import { cats, cat } from '@/data/cats';
+import { cats, cat } from '@/data/cat_list';
 import Layout from '@/components/Layout';
 import Loading from '@/components/Loading';
 import Cat from '@/components/cat_info/Cat';
@@ -30,11 +30,14 @@ function Cid({}: Props) {
   }, [cid]);
 
   return (
-    <>
+    <div>
       <Layout>
+        <Head>
+          <title>{loading ? '' : cat?.bleed.eng}</title>
+        </Head>
         <div>{loading ? <Loading /> : <Cat cat={cat} />}</div>
       </Layout>
-    </>
+    </div>
   );
 }
 
