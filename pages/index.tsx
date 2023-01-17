@@ -4,7 +4,7 @@ import { Inter, Kanit } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
-import CatSlider from '@/components/catSlideer/CatSlider';
+import CatSlider from '@/components/slider/catSlideer/CatSlider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -86,6 +86,16 @@ export default function Home() {
         {/* top 10 cats slider */}
         <div className="lg:container mt-64 mx-auto">
           <CatSlider />
+        </div>
+
+        <div className="w-[60rem]">
+          <iframe
+            width="450"
+            height={300}
+            src="https://www.youtube.com/embed/r-4JqG11wUk"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
         </div>
       </Layout>
     </>
