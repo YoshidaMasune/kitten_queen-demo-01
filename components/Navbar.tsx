@@ -8,8 +8,15 @@ interface navLink {
 }
 
 const NavLink = ({ to, content }: navLink) => {
+  // edit li when hover add bg-sky-300 in className
+
+  const [hover, setHover] = React.useState(false);
   return (
-    <li>
+    <li
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className={` ${hover ? 'text-sky-600' : ''}`}
+    >
       <Link href={to}>{content}</Link>
     </li>
   );

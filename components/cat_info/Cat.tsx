@@ -1,16 +1,15 @@
 import React from 'react';
 import { cat, cats } from '@/data/cat_list';
 import CatSlider from '../slider/catSlideer/CatSlider';
+import CatContent from './CatContent';
 
 type Props = {
   cat?: cat;
 };
 
-interface catContent {
-  img: string;
-  head: string;
-  info: string;
-}
+interface catContent {}
+
+// comment for this
 
 function Cat({ cat }: Props) {
   return (
@@ -56,21 +55,35 @@ function Cat({ cat }: Props) {
       {/* cat history */}
 
       <div className="bg-sky-200">
-        <div className="container mx-auto py-32 ">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-            officiis architecto velit rem. Atque, obcaecati tempore quod totam
-            assumenda maiores earum impedit recusandae deleniti, aut hic
-            necessitatibus dolorum, facilis officia!
-          </p>
+        <div className="w-3/4 mx-auto py-32 ">
+          <article className="flex ">
+            <p className="w-1/5 text-center">ความเป็นมา</p>
+            <p className="w-3/4">{cat?.derivation}</p>
+          </article>
         </div>
       </div>
 
+      {/* cat information */}
+      <div className="space-y-24">
+        <CatContent
+          img={cat?.general_nature.img}
+          info={cat?.general_nature.info}
+          head="ลักษณะทั่วไป"
+        />
+        <CatContent
+          img={cat?.general_character.img}
+          info={cat?.general_character.info}
+          head="ลักษณะนิสัย"
+          secondary={true}
+        />
+      </div>
       {/* cat slide */}
 
       <div>
         <CatSlider />
       </div>
+
+      {/* create section */}
     </div>
   );
 }

@@ -86,7 +86,7 @@ export default function Home() {
         </div>
 
         {/* top 10 cats slider */}
-        <div className="lg:container mt-64 mx-auto">
+        <div className="mt-64">
           <CatSlider />
         </div>
 

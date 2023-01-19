@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { cats, cat } from '@/data/cat_list';
 import Link from 'next/link';
 import index from '@/pages/blogs';
 import HeadTitle from '@/components/HeadTitle';
+
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+// import './Slider.css';
 
 type Props = {};
 
@@ -15,7 +20,7 @@ interface catItem {
 
 const CatItem = ({ cat, index }: catItem) => {
   return (
-    <div className="inline-block w-[200px] h-[250px] flex flex-col transtion-transform duration-300 relative hover:z-10 rounded-lg overflow-hidden shadow-lg drop-shadow-lg">
+    <div className="inline-block w-[200px] h-[250px] flex flex-col  hover:z-10 rounded-lg overflow-hidden shadow-lg drop-shadow-lg">
       <Link
         href={`/cats/${cat.id}`}
         className="flex flex-auto overflow-hidden h-3/5  "
@@ -46,15 +51,70 @@ const CatItem = ({ cat, index }: catItem) => {
 // >>>>>>>>>> slide items cats <<<<<<<<<< //
 
 function CatSlider({}: Props) {
+  // create slider in nextjs with teranslateX  tailwind
+  const [sliderRef, setSliderRef] = useState();
+
+  const [sliderSettings, setSliderSettings] = useState({
+    dots: true,
+    infinite: false,
+    speed: 200,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 0,
+    arrow: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  // className="grid lg:w-2/4 w-full grid-flow-col auto-cols-max transition-transform duration-300 delay-100"
+
   return (
-    <div className="mt-20">
+    <div className="mt-20 lg:container mx-auto">
       <div>
         <HeadTitle th="10 อันดับสายพันธุ์เเมว" eng="10 bleeds cat" />
       </div>
-      <div className="mt-20 w-3/4 mx-auto grid grid-flow-col gap-x-5 auto-cols-max p-10 overflow-auto">
-        {cats.map((i, index) => (
-          <CatItem key={index} cat={i} index={index} />
-        ))}
+      <div className="relative mx-auto">
+        <div className=" mt-20  mx-auto ">
+          <Slider ref={setSliderRef} {...sliderSettings}>
+            {cats.map((i, index) => (
+              <CatItem key={index} cat={i} index={index} />
+            ))}
+          </Slider>
+        </div>
+        <button
+          onClick={sliderRef?.slickPrev}
+          className="z-20 absolute h-full bg-gray-200 left-0 top-0"
+        >
+          prev
+        </button>
+        <button
+          onClick={sliderRef?.slickNext}
+          className="z-20 absolute h-full bg-gray-100 opacity-1 right-0 top-0 "
+        >
+          next
+        </button>
       </div>
     </div>
   );
