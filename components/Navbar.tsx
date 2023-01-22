@@ -26,7 +26,7 @@ function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const isClient = typeof window === 'object';
-  const windowRef = useRef(isClient ? window : null);
+  const windowRef: any = useRef(isClient ? window : null);
 
   useEffect(() => {
     if (!isClient) {
@@ -48,7 +48,7 @@ function Navbar() {
   return (
     <nav
       className={`bg-white sticky  ${
-        visible ? 'top-0' : '-top-[200px]'
+        visible ? 'top-0' : '-top-[64px]'
       } z-50 shadow-md transition-all duration-300`}
     >
       <div className="">

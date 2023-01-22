@@ -18,7 +18,7 @@ function KnowlageItem({ data }: Props) {
               className="lg:h-64 h-32 object-cover object-center"
             />
           </div>
-          <div className="absolute bottom-0 h-2/4  bg-red-200 bg-opacity-50 w-full backdrop-blur-sm">
+          <div className="absolute bottom-0 h-2/4 bg-yellow-100 bg-opacity-50 w-full backdrop-blur-sm">
             <article className="p-3">
               <h3 className="text-slate-800 text-sm lg:text-lg text-semibold line-clamp-2">
                 {data?.head}
