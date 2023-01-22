@@ -2,7 +2,7 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Roboto, Kanit, Mali } from '@next/font/google';
+import { Roboto, Kanit, Mali, Imprima } from '@next/font/google';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -19,9 +19,13 @@ const mali = Mali({
   subsets: ['thai', 'latin'],
 });
 
+const imprima = Imprima({
+  weight: ['400'],
+  subsets: ['latin'],
+});
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={mali.className}>
+    <main className={`${imprima.className} ${mali.className}`}>
       <Component {...pageProps} />
     </main>
   );
