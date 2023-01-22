@@ -92,7 +92,7 @@ function CatSlider({}: Props) {
 
   return (
     <div className="my-20 lg:container mx-auto">
-      <div>
+      <div className="w-fit mx-auto">
         <HeadTitle th="10 อันดับสายพันธุ์เเมว" eng="10 bleeds cat" />
       </div>
       <div className="relative w-3/4 mx-auto">

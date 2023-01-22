@@ -7,7 +7,6 @@ type Props = {
   cat?: cat;
 };
 
-interface catContent {}
 
 // comment for this
 

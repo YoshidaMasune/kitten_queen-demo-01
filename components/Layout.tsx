@@ -15,12 +15,14 @@ function Layout({ children }: Props) {
         <link rel="icon" href="/logo/logo_cat.png" />
         <title>KQ</title>
       </Head>
-      <div className="flex flex-col h-[100vh]">
-        <div className=" flex-basis-auto">
-          <Navbar />
-        </div>
-        <section className="grow shrink-0 flex-basis-auto">{children}</section>
-        <div className="flex-basis-auto">
+      <div className="flex flex-col ">
+        {/* <div className=" sticky top-0 z-30 w-full basis-auto"> */}
+        <Navbar />
+        {/* </div> */}
+        <section className="grow shrink-0 min-h-[70vh] basis-auto">
+          {children}
+        </section>
+        <div className="basis-auto ">
           <Footer />
         </div>
       </div>

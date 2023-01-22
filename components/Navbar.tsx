@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SearchBar from './Searchbar';
 
 interface navLink {
@@ -23,8 +23,34 @@ const NavLink = ({ to, content }: navLink) => {
 };
 
 function Navbar() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const isClient = typeof window === 'object';
+  const windowRef = useRef(isClient ? window : null);
+
+  useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+    const handleScroll = () => {
+      const currentScrollPos = windowRef.current.pageYOffset;
+      const visible = prevScrollPos > currentScrollPos;
+      setPrevScrollPos(currentScrollPos);
+      setVisible(visible);
+    };
+
+    windowRef.current.addEventListener('scroll', handleScroll);
+    return () => {
+      windowRef.current.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos, isClient]);
+
   return (
-    <nav className="bg-white sticky top-0 z-30 w-full shadow-md">
+    <nav
+      className={`bg-white sticky  ${
+        visible ? 'top-0' : '-top-[200px]'
+      } z-50 shadow-md transition-all duration-300`}
+    >
       <div className="">
         {/* top bar */}
         <section className="md:container px-4 mx-auto flex justify-between items-center">
