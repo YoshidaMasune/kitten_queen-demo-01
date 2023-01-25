@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef, useState } from 'react';
 import SearchBar from './Searchbar';
 
@@ -8,14 +9,23 @@ interface navLink {
 }
 
 const NavLink = ({ to, content }: navLink) => {
-  // edit li when hover add bg-sky-300 in className
+  const [hover, setHover] = useState(false);
+  const [target, setTarget] = useState(false);
+  const router = useRouter();
+  const path = router.pathname;
 
-  const [hover, setHover] = React.useState(false);
+  useEffect(() => {
+    if (path == to) {
+      setTarget(true);
+    }
+  }, [path]);
   return (
     <li
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className={` ${hover ? 'text-sky-600' : ''}`}
+      className={`transition-all duration-400 ease-in ${
+        hover ? 'text-sky-600' : ''
+      } ${target ? 'text-sky-600' : ''}`}
     >
       <Link href={to}>{content}</Link>
     </li>

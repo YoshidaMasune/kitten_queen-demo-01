@@ -1,33 +1,31 @@
 import Layout from '@/components/Layout';
 import React from 'react';
 import { knowlage_list, knowlage } from '@/data/knowlage';
-import Knowlage from '@/components/knowlage/Knowlage';
-import HeadTitle from '@/components/HeadTitle';
 import KnowlageItem from '@/components/knowlage/KnowlageItem';
+import AsideBlog from '@/components/blog/AsideBlog';
 
 type Props = {};
 
 function index({}: Props) {
   return (
     <Layout>
-      <div className="container mx-auto my-20">
-        <div className="w-3/5 border-b pb-10">
-          <article>
-            <h2 className="text-md lg:text-4xl tracking-wider">
+      <div className="container mx-auto mt-10 mb-20">
+        <div className="w-full lg:w-3/5 lg:mx-0 mx-auto border-b pb-10">
+          <article className="lg:text-start text-center">
+            <h2 className="text-lg lg:text-4xl tracking-wider">
               <span className="text-sky-500">เกร็ดความ</span>
               <span className="text-yellow-500">รู้ของน้องเเมว</span>
             </h2>
           </article>
         </div>
-        <div className=" flex gap-20 mt-20">
-          <div className=" shrink-0 basis-auto grid  grid-cols-2 w-3/5  gap-20 mt-20">
+        <div className="flex gap-20">
+          <div className="border-r pr-5 shrink-0 basis-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10 w-full lg:w-3/5 mt-10 lg:mt-20">
             {knowlage_list.map((knowlage, index) => (
-              <KnowlageItem data={knowlage} />
+              <KnowlageItem key={index} data={knowlage} />
             ))}
           </div>
-
-          <div className="basis-auto grow ">
-            <div className="sticky top-32 p-10 border-t">dfsdfsdafasd</div>
+          <div className="basis-auto grow hidden mt-5 lg:block">
+            <AsideBlog />
           </div>
         </div>
       </div>
