@@ -16,9 +16,13 @@ function BlogItem({ blog }: Props) {
         </div>
         <div className="w-4/5 flex justify-between flex-col p-3 ">
           <article className="">
-            <h1 className="text-sky-500 text-xl leading-10">{blog.head}</h1>
+            <Link href={`/blogs/${blog.id}`}>
+              <h1 className="text-sky-600 hover:text-sky-500 text-xl leading-10">
+                {blog.head}
+              </h1>
+            </Link>
             <p className="line-clamp-2 text-slate-700 indent-10">
-              {blog.subtitle}
+              {blog.subtitle ? blog.subtitle : blog.contents}
             </p>
           </article>
           <Link href={`/blogs/${blog.id}`} className="self-end">

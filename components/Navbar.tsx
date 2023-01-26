@@ -81,7 +81,7 @@ function Navbar() {
         </section>
 
         {/* navigation bar */}
-        <section className="w-full bg-slate-200 py-4 ">
+        <section className="w-full bg-gray-100 py-4 ">
           <ul className="flex gap-3 w-fit mx-auto">
             <NavLink to="/" content="หน้าเเรก" />
             <NavLink to="/cats" content="10 สายพันธุ์เเมว" />

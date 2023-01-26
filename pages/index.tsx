@@ -49,11 +49,13 @@ export default function Home() {
                   </article>
                 </div>
                 <div className="flex-1">
-                  <img
-                    src="/logo/logo_cat.png"
-                    className="w-32 mx-auto lg:w-64"
-                    alt=""
-                  />
+                  <div className="rounded-full w-full lg:w-64  mx-auto  overflow-hidden">
+                    <img
+                      src="/cats/USAshorthair/05.png "
+                      className="w-full"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -74,11 +76,13 @@ export default function Home() {
                   </article>
                 </div>
                 <div className="flex-1">
-                  <img
-                    src="/logo/logo_cat.png"
-                    className="w-32 mx-auto lg:w-64"
-                    alt=""
-                  />
+                  <div className="rounded-full w-full lg:w-64  mx-auto  overflow-hidden">
+                    <img
+                      src="/cats/USAshorthair/05.png "
+                      className="w-full"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>

@@ -105,13 +105,13 @@ function CatSlider({}: Props) {
         </div>
         <button
           onClick={sliderRef?.slickPrev}
-          className="opacity-20 hover:opacity-100 transition-opacity duration-300 z-20 absolute h-full bg-gray-200 left-0 top-0"
+          className="opacity-20 hover:opacity-75  transition-opacity duration-300 z-20 absolute h-full bg-gray-100 left-0 top-0"
         >
           prev
         </button>
         <button
           onClick={sliderRef?.slickNext}
-          className="opacity-20 hover:opacity-100 transition-opacity duration-300 z-20 absolute h-full bg-gray-100 opacity-1 right-0 top-0 "
+          className="opacity-20 hover:opacity-75 transition-opacity duration-300 z-20 absolute h-full bg-gray-100 opacity-1 right-0 top-0 "
         >
           next
         </button>
