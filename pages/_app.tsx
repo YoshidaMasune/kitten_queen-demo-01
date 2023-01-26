@@ -25,7 +25,7 @@ const imprima = Imprima({
 });
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${imprima.className} ${mali.className}`}>
+    <main className={`${kanit.className}`}>
       <Component {...pageProps} />
     </main>
   );

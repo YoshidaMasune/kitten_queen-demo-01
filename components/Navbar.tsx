@@ -65,13 +65,15 @@ function Navbar() {
         {/* top bar */}
         <section className="md:container px-4 mx-auto flex justify-between items-center">
           <div className="flex container mx-auto">
-            <div className="flex">
-              <img src="/logo/logo_cat.png" className="w-[4rem]" alt="" />
-              <article className="self-center gap-2 hidden md:flex">
-                <h1 className="text-4xl text-sky-500">kitten</h1>
-                <h1 className="text-4xl text-yellow-500">queens</h1>
-              </article>
-            </div>
+            <Link href={`/`}>
+              <div className="flex">
+                <img src="/logo/logo_cat.png" className="w-[4rem]" alt="" />
+                <article className="self-center gap-2 hidden md:flex">
+                  <h1 className="text-4xl text-sky-500">kitten</h1>
+                  <h1 className="text-4xl text-yellow-500">queens</h1>
+                </article>
+              </div>
+            </Link>
           </div>
           <div className="">
             <SearchBar />
