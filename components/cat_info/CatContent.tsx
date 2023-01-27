@@ -21,8 +21,12 @@ function CatContent({ head, img, info, secondary }: Props) {
             <p className="leading-[3.5rem] pl-4">{info}</p>
           </article>
         </section>
-        <section className="w-3/4 mx-auto lg:w-2/4 h-[555px] overflow-hidden rounded-lg">
-          <img src={`${img}`} alt="" className="object-top-center" />
+        <section className="w-3/4 mx-auto lg:w-2/4 h-[555px] shadow-lg overflow-hidden rounded-lg">
+          <img
+            src={`${img}`}
+            alt=""
+            className="object-top object-cover h-full w-full"
+          />
         </section>
       </div>
     </div>

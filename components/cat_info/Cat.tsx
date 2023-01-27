@@ -7,7 +7,6 @@ type Props = {
   cat?: cat;
 };
 
-
 // comment for this
 
 function Cat({ cat }: Props) {
@@ -24,7 +23,7 @@ function Cat({ cat }: Props) {
           <section className="lg:w-3/5  w-full mx-auto">
             <div className="lg:container flex flex-col lg:flex-row mx-auto">
               <div className="w-3/4 mx-auto lg:w-2/4 lg:w-3/5 overflow-hidden rounded-lg">
-                <img src={`${cat?.img[0]}`} alt="" />
+                <img src={`${cat?.img[0]}`} alt="" className="w-full" />
               </div>
               <div className=" lg:w-2/5 container mx-auto px-5  space-y-20 lg:pl-10 mt-10 lg:mt-0">
                 <section className="">

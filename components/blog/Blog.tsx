@@ -62,6 +62,22 @@ function Blog({ blog }: Props) {
                 );
               })}
             </div>
+
+            {/* image  */}
+            <div className="w-3/4 mx-auto my-10">
+              <img src={`/cats/Bengal/04.jpg`} alt="" />
+            </div>
+
+            <div className=" w-3/5 my-20">
+              <a
+                className="line-clamp-1 text-sky-700 hover:text-red-400"
+                href={`${blog?.cradit}`}
+                target="_blank"
+              >
+                <span>ที่มา:</span>
+                <span>{blog?.cradit}</span>
+              </a>
+            </div>
           </div>
         </section>
         <section className=" basis-auto grow hidden mt-5 lg:block">

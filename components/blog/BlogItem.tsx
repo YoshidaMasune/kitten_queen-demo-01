@@ -26,7 +26,7 @@ function BlogItem({ blog }: Props) {
             </p>
           </article>
           <Link href={`/blogs/${blog.id}`} className="self-end">
-            <button className=" px-3 py-1 rounded-xl bg-sky-500 text-white transition-all duration-200 hover:bg-yellow-500 hover:-translate-y-[0.5rem] hover:-translate-x-[.5rem]">
+            <button className=" px-3 py-1 rounded-xl bg-sky-500 text-white transition-all duration-200 hover:bg-yellow-500 hover:-translate-y-[.5rem] hover:-translate-x-[.5rem]">
               อ่านเพิ่มเติม {`>>`}
             </button>
           </Link>

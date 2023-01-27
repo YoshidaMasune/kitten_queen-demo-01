@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BiSearchAlt2 } from 'react-icons/bi';
 
 interface Props {}
 
@@ -13,10 +14,13 @@ const SearchBar: React.FC<Props> = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="grid grid-flow-col items-center  overflow-hidden"
+      >
         <input
           type="text"
-          className="focus:outline-none border p-2 rounded-lg"
+          className="focus:outline-none border rounded-l-lg p-2 "
           placeholder="Search"
           value={query}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
@@ -24,8 +28,8 @@ const SearchBar: React.FC<Props> = () => {
           }
           required
         />
-        <button type="submit" className="your-button-class-name">
-          Search
+        <button type="submit" className="bg-sky-500 h-full p-2 rounded-r-lg">
+          <BiSearchAlt2 className="text-white hover:text-gray-300" />
         </button>
       </form>
     </div>
