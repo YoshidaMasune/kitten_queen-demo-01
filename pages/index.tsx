@@ -7,9 +7,19 @@ import CatSlider from '@/components/slider/catSlideer/CatSlider';
 import HeadTitle from '@/components/HeadTitle';
 import VidioSlide from '@/components/slider/vidios/VidioSlide';
 
-const inter = Inter({ subsets: ['latin'] });
+const dd = `https://www.googleapis.com/youtube/v3/search`;
+const YouTube_API_KEY = `AIzaSyByH3fuILF1EjNo4GnzFBmnCym5rGb8uK4`;
 
-export default function Home() {
+export async function getServerSideProps() {
+  const res = await fetch(`${dd}?&key=${YouTube_API_KEY}`);
+  const data = res.json();
+
+  return { props: data };
+}
+
+export default function Home(data: any) {
+  console.log(data);
+
   return (
     <>
       <Head>
