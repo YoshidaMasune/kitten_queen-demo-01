@@ -1,30 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import YouTube from 'react-youtube';
+import Slider from 'react-slick';
 // type Props = {};
 
-const MyComponent = () => {
-  const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      autoplay: 1,
-    },
-  };
-
-  return <YouTube videoId="q7EK3YQB5dA&t=760s" opts={opts} />;
-};
-
 function VidioSlide() {
-  const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      autoplay: 1,
-    },
-  };
+  const [sliderSettings, setSliderSettings] = useState({
+    dots: true,
+    infinite: false,
+    speed: 200,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    arrow: false,
+    responsive: [
+      {
+        breakpoint: 1524,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
+  });
   return (
     <div>
-      <YouTube videoId="q7EK3YQB5dA&t=760s" opts={opts} />
+      <Slider {...sliderSettings} className="w-3/5 mx-auto"></Slider>
     </div>
   );
 }

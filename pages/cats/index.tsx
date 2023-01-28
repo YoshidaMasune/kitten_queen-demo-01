@@ -33,7 +33,7 @@ function index() {
                       </p>
                     </div>
                     <div className="z-10">
-                      <CatItem cat={cat} index={index} />
+                      <CatItem key={index} cat={cat} index={index} />
                     </div>
                   </div>
                 );
@@ -47,8 +47,11 @@ function index() {
                 const length = knowlage_list.length;
                 if (index >= length - 2) {
                   return (
-                    <div className=" bg-yellow-200 rounded-lg p-4 w-4/5 ">
-                      <article>
+                    <div
+                      key={index}
+                      className=" bg-yellow-200 rounded-lg p-4 w-4/5 "
+                    >
+                      <article className="space-y-8">
                         <h2 className="text-2xl text-sky-600 text-end">
                           {data.head}
                         </h2>

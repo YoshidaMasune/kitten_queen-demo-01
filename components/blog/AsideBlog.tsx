@@ -7,7 +7,7 @@ type Props = {};
 function AsideBlog({}: Props) {
   return (
     <>
-      <div className="sticky top-32 p-10 border-t w-max ml-4 bg-white   ">
+      <div className="sticky top-32 p-10 border-t w-fit ml-4 bg-white   ">
         <article>
           <p className="text-2xl">บทความน่าสนใจ</p>
         </article>

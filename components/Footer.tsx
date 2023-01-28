@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import SearchBar from './Searchbar';
@@ -21,25 +22,32 @@ function Footer({}: Props) {
         </section>
         <section>
           <article>
-            <p>หมวดหมู่</p>
+            <p className="text-lg text-white">หมวดหมู่</p>
             <ul className="ml-5">
-              <li>
+              <li className="text-white hover:text-yellow-700">
                 <Link href={'/'}>หน้าเเรก</Link>
               </li>
-              <li>
+              <li className="text-white hover:text-yellow-700">
                 <Link href={'/blogs'}>บทความ</Link>
               </li>
-              <li>
+              <li className="text-white hover:text-yellow-700">
                 <Link href={'/knowlage'}>เกร็ดความรู้</Link>
               </li>
-              <li>
+              <li className="text-white hover:text-yellow-700">
                 <Link href={'/cats'}>10 สายพันธุ์เเมว</Link>
               </li>
             </ul>
           </article>
         </section>
-        <section>
+        <section className="space-y-3">
           <SearchBar />
+          <Image
+            src={`/logo/logo_cat.png`}
+            width={500}
+            height={500}
+            className="h-32 w-auto"
+            alt="cats"
+          />
         </section>
       </footer>
     </div>

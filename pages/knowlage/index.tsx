@@ -18,11 +18,13 @@ function index({}: Props) {
             </h2>
           </article>
         </div>
-        <div className="flex gap-20">
-          <div className="border-r pr-5 shrink-0 basis-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10 w-full lg:w-3/5 mt-10 lg:mt-20">
-            {knowlage_list.map((knowlage, index) => (
-              <KnowlageItem key={index} data={knowlage} />
-            ))}
+        <div className="flex ">
+          <div className="lg:border-r lg:pr-5 shrink-0 basis-auto  w-full lg:w-3/5 mt-10 lg:mt-20">
+            <div className="grid  grid-cols-1 md:grid-cols-2 lg:gap-20 gap-10">
+              {knowlage_list.map((knowlage, index) => (
+                <KnowlageItem key={index} data={knowlage} />
+              ))}
+            </div>
           </div>
           <div className="basis-auto grow hidden mt-5 lg:block">
             <AsideBlog />

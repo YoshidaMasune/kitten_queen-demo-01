@@ -1,25 +1,11 @@
 import Head from 'next/head';
-import { Inter, Kanit } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import CatSlider from '@/components/slider/catSlideer/CatSlider';
 import HeadTitle from '@/components/HeadTitle';
-import VidioSlide from '@/components/slider/vidios/VidioSlide';
-
-const dd = `https://www.googleapis.com/youtube/v3/search`;
-const YouTube_API_KEY = `AIzaSyByH3fuILF1EjNo4GnzFBmnCym5rGb8uK4`;
-
-export async function getServerSideProps() {
-  const res = await fetch(`${dd}?&key=${YouTube_API_KEY}`);
-  const data = res.json();
-
-  return { props: data };
-}
 
 export default function Home(data: any) {
-  console.log(data);
-
   return (
     <>
       <Head>
@@ -100,10 +86,6 @@ export default function Home(data: any) {
         {/* top 10 cats slider */}
         <div className="mt-64">
           <CatSlider />
-        </div>
-
-        <div className="mt-20">
-          <VidioSlide />
         </div>
       </Layout>
     </>

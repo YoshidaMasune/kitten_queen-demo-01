@@ -11,7 +11,7 @@ function KnowlageItem({ data }: Props) {
     <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-sky-300">
       <Link href={`/knowlage/${data?.id}`}>
         <div className="relative overflow-hidden">
-          <div className="h-full ">
+          <div className="h-full">
             <img
               src="/cats/persian/06.png"
               alt=""

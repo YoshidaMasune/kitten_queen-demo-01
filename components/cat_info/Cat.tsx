@@ -2,6 +2,7 @@ import React from 'react';
 import { cat, cats } from '@/data/cat_list';
 import CatSlider from '../slider/catSlideer/CatSlider';
 import CatContent from './CatContent';
+import CatImages from './CatImages';
 
 type Props = {
   cat?: cat;
@@ -19,12 +20,24 @@ function Cat({ cat }: Props) {
           <h1 className="text-sm md:text-2xl">({cat?.bleed.eng})</h1>
         </article>
 
+        {/* cat fist data  */}
         <div className="mt-24">
           <section className="lg:w-3/5  w-full mx-auto">
             <div className="lg:container flex flex-col lg:flex-row mx-auto">
-              <div className="w-3/4 mx-auto lg:w-2/4 lg:w-3/5 overflow-hidden rounded-lg">
-                <img src={`${cat?.img[0]}`} alt="" className="w-full" />
+              {/* img slide */}
+              {/* <div className="w-3/4 mx-auto lg:w-2/4 lg:w-3/5 border">
+                <img
+                  src={`${cat?.img[0]}`}
+                  alt=""
+                  className="w-auto h-3/4 mx-auto"
+                />
+              </div> */}
+
+              <div className="w-3/4 mx-auto lg:w-2/4 lg:w-3/5 ">
+                <CatImages imgs={cat?.img} />
               </div>
+
+              {/* data section */}
               <div className=" lg:w-2/5 container mx-auto px-5  space-y-20 lg:pl-10 mt-10 lg:mt-0">
                 <section className="">
                   <article className="flex lg:flex-row lg:gap-5 flex-col">
