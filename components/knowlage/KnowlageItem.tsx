@@ -8,7 +8,7 @@ interface Props {
 
 function KnowlageItem({ data }: Props) {
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-sky-300">
+    <div className="mx-auto rounded-lg overflow-hidden shadow-lg hover:shadow-sky-300">
       <Link href={`/knowlage/${data?.id}`}>
         <div className="relative overflow-hidden">
           <div className="h-full">

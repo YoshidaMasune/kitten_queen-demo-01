@@ -28,8 +28,11 @@ const SearchBar: React.FC<Props> = () => {
           }
           required
         />
-        <button type="submit" className="bg-sky-500 h-full p-2 rounded-r-lg">
-          <BiSearchAlt2 className="text-white hover:text-gray-300" />
+        <button
+          type="submit"
+          className="bg-sky-500 h-full hover:bg-yellow-400 text-white hover:text-sky-800 p-2 rounded-r-lg"
+        >
+          <BiSearchAlt2 className="" />
         </button>
       </form>
     </div>

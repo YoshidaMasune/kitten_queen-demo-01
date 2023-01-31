@@ -33,7 +33,7 @@ export default function Home(data: any) {
                     <h2 className="text-lg lg:text-2xl  px-3 text-sky-900">
                       การแตะจมูกเป็นการทักทายอย่างหนึ่ง
                     </h2>
-                    <p className="mt-5 lg:leading-[4rem] leading-[2rem] indent-6 text-sm ml-3">
+                    <p className="mt-5 lg:leading-[4rem] leading-[2rem] indent-6 text-sm ml-3 lg:text-lg">
                       เวลาที่เห็นแมวเอาจมูกมาแตะกันไม่ใช่เรื่องผิดปกติอะไร
                       เพราะอาการดังกล่าวเป็นแค่การทักทายแบบแมวทั่วไป
                       แต่อย่างไรพวกมันจะทักทายด้วยวิธีดังกล่าวกับแมวที่คุ้นเคยเท่านั้น
@@ -57,10 +57,10 @@ export default function Home(data: any) {
               <div className="flex flex-col-reverse md:flex-row gap-10">
                 <div className="flex-1">
                   <article>
-                    <h2 className="text-lg lg:text-2xl  px-3 text-sky-900">
+                    <h2 className="text-lg lg:text-2xl px-3 text-sky-900">
                       การแตะจมูกเป็นการทักทายอย่างหนึ่ง
                     </h2>
-                    <p className="mt-5 lg:leading-[4rem] leading-[2rem] indent-6 text-sm ml-3">
+                    <p className="mt-5 leading-[2rem] indent-6 text-sm ml-3 lg:leading-[4rem] lg:text-lg">
                       เวลาที่เห็นแมวเอาจมูกมาแตะกันไม่ใช่เรื่องผิดปกติอะไร
                       เพราะอาการดังกล่าวเป็นแค่การทักทายแบบแมวทั่วไป
                       แต่อย่างไรพวกมันจะทักทายด้วยวิธีดังกล่าวกับแมวที่คุ้นเคยเท่านั้น
