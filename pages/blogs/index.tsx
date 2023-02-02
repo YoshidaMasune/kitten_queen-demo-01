@@ -22,7 +22,7 @@ function index({}: Props) {
 
           {/* container */}
 
-          <div className="flex flex-row  container mx-auto">
+          <div className="flex flex-row w-3/5 mx-auto">
             {/* blogs conainer */}
 
             <section className="shrink-0 w-3/5 basis-auto mt-20">

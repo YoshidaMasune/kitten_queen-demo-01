@@ -1,7 +1,7 @@
 import { blog } from '@/data/blogs';
 import Link from 'next/link';
 import React from 'react';
-
+import { BsChevronDoubleRight } from 'react-icons/bs';
 type Props = {
   blog: blog;
 };
@@ -25,9 +25,13 @@ function BlogItem({ blog }: Props) {
               {blog.subtitle ? blog.subtitle : blog.contents}
             </p>
           </article>
-          <Link href={`/blogs/${blog.id}`} className="self-end">
-            <button className=" px-3 py-1 rounded-xl bg-sky-500 text-white transition-all duration-200 hover:bg-yellow-500 hover:-translate-y-[.5rem] hover:-translate-x-[.5rem]">
-              อ่านเพิ่มเติม {`>>`}
+          <Link
+            href={`/blogs/${blog.id}`}
+            className="self-end bg-sky-500 rounded-xl px-3 py-1 text-white hover:bg-yellow-500 duration-200"
+          >
+            <button className="flex items-center">
+              อ่านเพิ่มเติม
+              <BsChevronDoubleRight className="inline-block" />
             </button>
           </Link>
         </div>

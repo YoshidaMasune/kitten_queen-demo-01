@@ -14,19 +14,6 @@ function CatImages({ imgs }: Props) {
     slidesToScroll: 1,
     initialSlide: 0,
     arrow: false,
-    appendDots: (dots: any) => <ul>{dots}</ul>,
-    dotsClass: 'grid grid-flow-col w-2/5 mx-auto gap-x-6 ',
-    customPaging: (i: number) => (
-      <div className="rounded-lg overflow-hidden">
-        <Image
-          src={`${imgs![i]}`}
-          width={100}
-          height={100}
-          alt="cats"
-          className="object-cover w-full object-center"
-        />
-      </div>
-    ),
   });
   return (
     <div className="relative">

@@ -27,7 +27,7 @@ export default function Home(data: any) {
             {/* knowlage container */}
             <div className="flex flex-col gap-20 lg:gap-64 mt-10">
               {/* knowlage item */}
-              <div className="flex flex-col-reverse flex-col md:flex-row-reverse gap-10">
+              <div className="flex flex-col-reverse md:flex-row-reverse gap-10">
                 <div className="flex-1">
                   <article>
                     <h2 className="text-lg lg:text-2xl  px-3 text-sky-900">
