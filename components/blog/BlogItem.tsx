@@ -17,7 +17,7 @@ function BlogItem({ blog }: Props) {
         <div className="w-4/5 flex justify-between flex-col p-3 ">
           <article className="">
             <Link href={`/blogs/${blog.id}`}>
-              <h1 className="text-sky-600 hover:text-sky-500 text-xl leading-10">
+              <h1 className="text-sky-600 hover:text-sky-500 text-xl leading-10 line-clamp-1">
                 {blog.head}
               </h1>
             </Link>

@@ -22,10 +22,10 @@ function index({}: Props) {
 
           {/* container */}
 
-          <div className="flex flex-row w-3/5 mx-auto">
+          <div className="flex flex-row w-full lg:w-3/5 mx-auto">
             {/* blogs conainer */}
 
-            <section className="shrink-0 w-3/5 basis-auto mt-20">
+            <section className="shrink-0 w-full lg:w-3/5 basis-auto mt-20">
               <div className="grid grid-flow-row auto-rows-[10rem] gap-y-5">
                 {blogs.map((data, index) => (
                   <BlogItem key={index} blog={data} />

@@ -7,9 +7,6 @@ import { FiChevronLeft, FiChevronRight, FiChevronsRight } from 'react-icons/fi';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import index from '@/pages/blogs';
-import Image from 'next/image';
-// import './Slider.css';
 
 type Props = {};
 
@@ -53,12 +50,12 @@ export const CatItem = ({ cat, index }: catItem) => {
 // >>>>>>>>>> slide items cats <<<<<<<<<< //
 
 interface SlickCat {
-  data: cat;
+  cat: cat;
   current: number;
   index: number;
 }
 
-const CatSlickItem = ({ data, current, index }: SlickCat) => {
+const CatSlickItem = ({ cat, current, index }: SlickCat) => {
   const [focus, setFocus] = useState(true);
 
   useEffect(() => {
@@ -71,13 +68,27 @@ const CatSlickItem = ({ data, current, index }: SlickCat) => {
 
   return (
     <div
-      className={`w-96 mx-auto shadow-md h-[30rem] rounded-lg overflow-hidden ${
-        focus ? 'scale-75' : 'scale-50'
-      } ease-in duration-100  `}
+      className={`w-full mx-auto flex flex-col shadow-md h-64 lg:h-[30rem] rounded-lg overflow-hidden ${
+        focus ? 'scale-100' : 'scale-75'
+      } ease-in duration-100`}
     >
-      <div className=" mx-auto">
-        <img src={`${data.img[0]}`} alt="cat" className="w-full" />
+      <div className="h-3/5  w-full overflow-hidden mx-auto">
+        <img
+          src={`${cat.img[0]}`}
+          alt="cat"
+          className="w-full hover:scale-125 ease-out duration-75 object-cover object-center"
+        />
       </div>
+
+      <article className="flex-1 flex flex-col mt-3 space-y-3 p-2">
+        <h3 className="text-center text-md lg:text-2xl font-semibold text-sky-500">
+          {cat.bleed.th}
+        </h3>
+        <p className="line-clamp-3 indent-10">{cat.derivation}</p>
+        <button className="bg-sky-500 px-2 py-1 w-max self-end text-white rounded-lg hover:bg-yellow-500 ease-in-out duration-100">
+          <Link href={`cats/${cat.id}`}>อ่านเพิ่มเติม</Link>
+        </button>
+      </article>
     </div>
   );
 };
@@ -88,7 +99,6 @@ function CatSlider({}: Props) {
 
   const [sliderSettings, setSliderSettings] = useState({
     focusOnSelect: true,
-    dots: true,
     infinite: true,
     speed: 200,
     slidesToShow: 3,
@@ -97,6 +107,16 @@ function CatSlider({}: Props) {
     arrow: false,
     centerMode: true,
     afterChange: (current: any) => setCurrent(current),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          // dots: true,
+        },
+      },
+    ],
   });
 
   return (
@@ -104,13 +124,17 @@ function CatSlider({}: Props) {
       <div className="w-fit mx-auto">
         <HeadTitle th="10 อันดับสายพันธุ์เเมว" eng="10 bleeds cat" />
       </div>
-      <div className="relative mx-auto">
-        <div className="h-auto ">
-          <Slider className="" ref={setSliderRef} {...sliderSettings}>
+      <div className="relative mt-20 mx-auto">
+        <div className="">
+          <Slider
+            className="w-4/5 mx-auto"
+            ref={setSliderRef}
+            {...sliderSettings}
+          >
             {cats.map((i, index) => {
               return (
                 <CatSlickItem
-                  data={i}
+                  cat={i}
                   current={current}
                   index={index}
                   key={index}
@@ -119,7 +143,7 @@ function CatSlider({}: Props) {
             })}
           </Slider>
         </div>
-        <button
+        {/* <button
           onClick={sliderRef?.slickPrev}
           className="opacity-20 hover:opacity-75  transition-opacity duration-300 z-20 absolute h-full  left-0 top-0"
         >
@@ -130,7 +154,7 @@ function CatSlider({}: Props) {
           className="opacity-20 hover:opacity-75 transition-opacity duration-300 z-20 absolute h-full opacity-1 right-0 top-0 "
         >
           <FiChevronRight className="text-4xl text-yellow-900 " />
-        </button>
+        </button> */}
       </div>
     </div>
   );
